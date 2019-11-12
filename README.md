@@ -1,9 +1,10 @@
- 888888ba  dP        dP     dP d888888P  .88888.      888888ba   .88888.  dP     dP  88888888b  888888ba 
- 88    `8b 88        88     88    88    d8'   `8b     88    `8b d8'   `8b 88     88  88         88    `8b
-a88aaaa8P' 88        88     88    88    88     88    a88aaaa8P' 88     88 88    .8P a88aaaa    a88aaaa8P'
- 88        88        88     88    88    88     88     88   `8b. 88     88 88    d8'  88         88   `8b.
- 88        88        Y8.   .8P    88    Y8.   .8P     88     88 Y8.   .8P 88  .d8P   88         88     88
- dP        88888888P `Y88888P'    dP     `8888P'      dP     dP  `8888P'  888888'    88888888P  dP     dP
+
+       _       _                                  
+ _ __ | |_   _| |_ ___    _ __ _____   _____ _ __ 
+| '_ \| | | | | __/ _ \  | '__/ _ \ \ / / _ \ '__|
+| |_) | | |_| | || (_) | | | | (_) \ V /  __/ |   
+| .__/|_|\__,_|\__\___/  |_|  \___/ \_/ \___|_|   
+|_|  
                  
 ----
 After NASA’s New Horizon successfully flew past Pluto, they now plan to land a Pluto Rover
@@ -40,10 +41,4 @@ sequence of commands encounters an obstacle, the rover moves up to the last
 possible point and reports the obstacle.
 Here is an example:
 * Let's say that the rover is located at 0,0 facing North on a 100x100 grid.
-* Given the command "FFRFF" would put the rover at 2,2 facing East.
-
-## Built With
-
-* [IntellJ](https://www.jetbrains.com/idea/) - Java IDE
-* [Maven](https://maven.apache.org/) - Dependency Management
-                                                                                                
+* Given the command "FFRFF" would put the rover at 2,2 facing East.                                                                                                
