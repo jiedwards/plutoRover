@@ -12,8 +12,11 @@ class plutoRover():
 				continue
 		return "Accepted"
 
-	# Calculate direction to identify which way user is facing.
-       # "N","E","S","W"
+	directions = { "N", "E", "S", "W"} # Calculate direction to identify which way user is facing.
+
+	def calculate_direction():
+		current_direction = "N"
+
        # pass in user input for direction change
        # if input == "L":
        # 	depending on userCurrent direction, change counter clockwise

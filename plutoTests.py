@@ -14,6 +14,14 @@ class plutoRoverTests(unittest.TestCase):
 		self.assertTrue(plutoRover.userInput("FRSD") == "Rejected") # Invalid characters
 		self.assertTrue(plutoRover.userInput("S QA /") == "Rejected") # No symbols or spaces allowed
 
+	def test_calculate_direction(self):
+
+		# Starting position is always set to North.
+		calculate_direction("L")
+		self.assertEqual(calculate_direction, "W")
+		calculate_direction("R")
+		calculate_direction("R")
+		self.assertEqual(calculate_direction, "E")
 
 		# Tests to ensure direction change works as expected.
        # "N","E","S","W"
