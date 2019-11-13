@@ -1,7 +1,5 @@
 import unittest
 from plutoRover import userInput
-from plutoRover import calculate_direction
-from plutoRover import current_direction
 
 class plutoRoverTests(unittest.TestCase):
 
@@ -25,8 +23,15 @@ class plutoRoverTests(unittest.TestCase):
 	def test_calculate_direction_right(self):
 		from plutoRover import calculate_direction
 		calculate_direction("R")
+		calculate_direction("R")
 		from plutoRover import current_direction
 		self.assertEqual(current_direction, "E")
+
+	def test_calculate_direction_invalid_input(self):
+		from plutoRover import calculate_direction
+		calculate_direction("H")
+		from plutoRover import current_direction
+		self.assertEqual(current_direction, "N")
 
 
     # Tests to Move forwards and backwards

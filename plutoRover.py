@@ -27,9 +27,18 @@ def calculate_direction(direction_command):
         	current_direction = "E"
         elif current_direction == "W":
         	current_direction = "S"
+    # Right Rotation    	
+    elif direction_command == "R":
+        if current_direction == "N":
+        	current_direction = "E"
+        elif current_direction == "E":
+        	current_direction = "S"
+        elif current_direction == "S":
+        	current_direction = "W"
+        elif current_direction == "W":
+        	current_direction = "N"
     return current_direction
 
-	# Right Rotation
 
 			# def leftTurn(current_direction):
 			# 	new_direction = {
