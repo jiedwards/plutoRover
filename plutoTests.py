@@ -10,7 +10,6 @@ class plutoRoverTests(unittest.TestCase):
 
 
 	def test_user_input_validation_rejected(self):
- 
 		self.assertTrue(userInput("FRSD") == "Rejected") # Invalid characters
 		self.assertTrue(userInput("S QA /") == "Rejected") # No symbols or spaces allowed
 
@@ -32,6 +31,8 @@ class plutoRoverTests(unittest.TestCase):
 		calculate_direction("H")
 		from plutoRover import current_direction
 		self.assertEqual(current_direction, "N")
+
+
 
 
     # Tests to Move forwards and backwards

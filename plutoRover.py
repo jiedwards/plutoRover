@@ -2,8 +2,9 @@
 def main():
 	print("Hello FundApps!")
 
+acceptedCommands = ["F", "B", "L", "R"]
+
 def userInput(input):
-	acceptedCommands = ["F", "B", "L", "R"]
 	for input in list(input):
 		if input not in acceptedCommands:
 			return "Rejected"
@@ -37,17 +38,18 @@ def calculate_direction(direction_command):
         	current_direction = "W"
         elif current_direction == "W":
         	current_direction = "N"
+    # Invalid Input sets position to default    	
+    else:
+    	current_direction = "N"
     return current_direction
 
+x = 0
+y = 0
 
-			# def leftTurn(current_direction):
-			# 	new_direction = {
-			# 		"N": "W",
-			# 		"E": "N",
-			# 		"S": "E",
-			# 		"W": "S"
-			# 	}
-			# 	return new_direction.get(current_direction)
+def calculate_movement_forward(movement_command, direction, x, y):
+	pass
+
+
 
 # Move forward and backward
 
