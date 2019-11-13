@@ -42,18 +42,27 @@ def calculate_direction(direction_command):
     else:
     	current_direction = "N"
     return current_direction
-
-x = 0 
+x = 0
 y = 0
 
 def calculate_movement_forward(movement_command, direction):
-	global x,y
-
+	global x, y
 	if movement_command == "F":
 		if direction == "N":
 			y+=1
-	return x, y
-
+		elif direction == "E":
+			x+=1
+		elif direction == "W": 
+			x-=1
+		elif direction == "S":
+			y-=1
+	else:
+		x = x
+		y = y
+	print(direction)
+	print(x)
+	print(y)
+	print(movement_command)
 
 # Move forward and backward
 

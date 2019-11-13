@@ -1,5 +1,6 @@
 import unittest
 from plutoRover import userInput
+from plutoRover import calculate_direction
 
 class plutoRoverTests(unittest.TestCase):
 
@@ -7,7 +8,6 @@ class plutoRoverTests(unittest.TestCase):
 
 		self.assertTrue(userInput("FBFF") == "Accepted")
 		self.assertTrue(userInput("FBLR") == "Accepted")
-
 
 	def test_user_input_validation_rejected(self):
 		self.assertTrue(userInput("FRSD") == "Rejected") # Invalid characters
@@ -32,14 +32,45 @@ class plutoRoverTests(unittest.TestCase):
 		from plutoRover import current_direction
 		self.assertEqual(current_direction, "N")
 
+# The movement below is happening consecutively as though the rover was live.
+	def test_calculate_movement_forward__facing_E(self):
+		from plutoRover import calculate_movement_forward
+		calculate_movement_forward("F", "E")
+		from plutoRover import x, y
+		self.assertEqual(x, 1)
+		self.assertEqual(y, 0)
+
 	def test_calculate_movement_forward__facing_N(self):
 		from plutoRover import calculate_movement_forward
-		from plutoRover import current_direction
 		calculate_movement_forward("F", "N")
 		from plutoRover import x, y
-		self.assertEqual(x, 0)
+		self.assertEqual(x, 1)
 		self.assertEqual(y, 1)
 
+	def test_calculate_movement_forward__facing_S(self):
+		from plutoRover import calculate_movement_forward
+		calculate_movement_forward("F", "S")
+		from plutoRover import x, y
+		print(x)
+		print(y)
+		self.assertEqual(x, 1)
+		self.assertEqual(y, 0)
+
+	def test_calculate_movement_forward__facing_W(self):
+		from plutoRover import calculate_movement_forward
+		calculate_movement_forward("F", "W")
+		from plutoRover import x, y
+		print(x)
+		print(y)
+		self.assertEqual(x, 0)
+		self.assertEqual(y, 0)
+
+	def test_calculate_movement_backward__facing_E(self):
+		from plutoRover import calculate_movement_backward
+		calculate_movement_backward("B", "E")
+		from plutoRover import x, y
+		self.assertEqual(x, -1)
+		self.assertEqual(y, 0)
 
     # Tests to Move forwards and backwards
 
