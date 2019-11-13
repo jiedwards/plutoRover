@@ -1,31 +1,46 @@
-class plutoRover():
-	
-	def main():
-		print("Hello FundApps!")
 
-	def userInput(input):
-		acceptedCommands = ["F", "B", "L", "R"]
-		for input in list(input):
-			if input not in acceptedCommands:
-				return "Rejected"
-			else:
-				continue
-		return "Accepted"
+def main():
+	print("Hello FundApps!")
 
-	directions = { "N", "E", "S", "W"} # Calculate direction to identify which way user is facing.
+def userInput(input):
+	acceptedCommands = ["F", "B", "L", "R"]
+	for input in list(input):
+		if input not in acceptedCommands:
+			return "Rejected"
+		else:
+			continue
+	return "Accepted"
 
-	def calculate_direction():
-		current_direction = "N"
+directions = { "N", "E", "S", "W"} # Calculate direction to identify which way user is facing.
+current_direction = "N"
 
-       # pass in user input for direction change
-       # if input == "L":
-       # 	depending on userCurrent direction, change counter clockwise
-       # elif input == "R":
-       # 	depending on userCurrent direction, change clockwise
-       # else: 
-       # 	invalid
+def calculate_direction(direction_command):
+    global current_direction
 
-    # Move forward and backward
+   	# Left Rotation
+    if direction_command == "L":
+        if current_direction == "N":
+        	current_direction = "W"
+        elif current_direction == "E":
+        	current_direction = "N"
+        elif current_direction == "S":
+        	current_direction = "E"
+        elif current_direction == "W":
+        	current_direction = "S"
+    return current_direction
 
-	if __name__ == "__main__":
-	    main()
+	# Right Rotation
+
+			# def leftTurn(current_direction):
+			# 	new_direction = {
+			# 		"N": "W",
+			# 		"E": "N",
+			# 		"S": "E",
+			# 		"W": "S"
+			# 	}
+			# 	return new_direction.get(current_direction)
+
+# Move forward and backward
+
+if __name__ == "__main__":
+    main()

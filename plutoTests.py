@@ -1,37 +1,33 @@
 import unittest
-from plutoRover import plutoRover
+from plutoRover import userInput
+from plutoRover import calculate_direction
+from plutoRover import current_direction
 
 class plutoRoverTests(unittest.TestCase):
 
 	def test_user_input_validation_accepted(self):
 
-		self.assertTrue(plutoRover.userInput("FBFF") == "Accepted")
-		self.assertTrue(plutoRover.userInput("FBLR") == "Accepted")
+		self.assertTrue(userInput("FBFF") == "Accepted")
+		self.assertTrue(userInput("FBLR") == "Accepted")
 
 
 	def test_user_input_validation_rejected(self):
  
-		self.assertTrue(plutoRover.userInput("FRSD") == "Rejected") # Invalid characters
-		self.assertTrue(plutoRover.userInput("S QA /") == "Rejected") # No symbols or spaces allowed
+		self.assertTrue(userInput("FRSD") == "Rejected") # Invalid characters
+		self.assertTrue(userInput("S QA /") == "Rejected") # No symbols or spaces allowed
 
-	def test_calculate_direction(self):
-
-		# Starting position is always set to North.
+	def test_calculate_direction_left(self):
+		from plutoRover import calculate_direction
 		calculate_direction("L")
-		self.assertEqual(calculate_direction, "W")
-		calculate_direction("R")
-		calculate_direction("R")
-		self.assertEqual(calculate_direction, "E")
+		from plutoRover import current_direction
+		self.assertEqual(current_direction, "W")
 
-		# Tests to ensure direction change works as expected.
-       # "N","E","S","W"
-       # pass in user input for direction change
-       # if input == "L":
-       # 	depending on userCurrent direction, change counter clockwise
-       # elif input == "R":
-       # 	depending on userCurrent direction, change clockwise
-       # else: 
-       # 	invalid
+	def test_calculate_direction_right(self):
+		from plutoRover import calculate_direction
+		calculate_direction("R")
+		from plutoRover import current_direction
+		self.assertEqual(current_direction, "E")
+
 
     # Tests to Move forwards and backwards
 
