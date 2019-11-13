@@ -32,7 +32,13 @@ class plutoRoverTests(unittest.TestCase):
 		from plutoRover import current_direction
 		self.assertEqual(current_direction, "N")
 
-
+	def test_calculate_movement_forward__facing_N(self):
+		from plutoRover import calculate_movement_forward
+		from plutoRover import current_direction
+		calculate_movement_forward("F", "N")
+		from plutoRover import x, y
+		self.assertEqual(x, 0)
+		self.assertEqual(y, 1)
 
 
     # Tests to Move forwards and backwards
