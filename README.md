@@ -17,13 +17,6 @@ of the four cardinal compass points. An example position might be 0, 0, N, which
 rover is in the bottom left corner and facing North. Assume that the square directly North
 from (x, y) is (x, y+1).
 
-## Test Implementations
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Implementation Considerations
 
